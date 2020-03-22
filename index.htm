@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <meta charset="utf-8" />
-    <title>test site</title>
+  <!-- ① A-Frame を読み込む -->
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <!-- ② AR.js を読み込む -->
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 </head>
-<body>
-    <p>Hello World02</p>
+<body style='margin: 0; overflow: hidden;'>
+<!-- ③ シーンを追加 -->
+<a-scene embedded arjs>
+  <!-- ④ マーカーを追加 ここから -->
+  <a-marker preset="hiro">
+    <!-- ⑤ オブジェクトの追加 -->
+    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
+      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
+      </a-animation>
+    </a-sphere>
+  </a-marker>
+
+  <!-- ⑥ カメラを追加 -->
+  <a-entity camera></a-entity>
+</a-scene>
 </body>
 </html>
