@@ -1,33 +1,16 @@
-<!DOCTYPE html>
-<head>
-  <!-- ① スクリプトの読み込み -->
-  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-</head>
-<body style='margin: 0; overflow: hidden;'>
+<HTML>
+<BODY>
+<B>WebAR サンプル AR.js</B>
 
-<!-- シーンの追加とデバックUIを非表示 -->
-<a-scene embedded arjs="debugUIEnabled:false;">
+<a href="https://keen-galileo-f6603f.netlify.com/ARWeb_04_myMarker/index.htm" >
+オリジナルマーカーで球体表示</a>
 
-  <!-- ② hiroマーカーでのソース -->
-  <a-marker preset="hiro">
-    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
-      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
-      </a-animation>
-    </a-sphere>
-  </a-marker>
+<a href="https://keen-galileo-f6603f.netlify.com/ARWeb_05_3D/ARweb_05_3D.htm" >
+ARマーカーで3Dピクチャ表示 オリジナルマーカー</a>
+
+<a href="https://keen-galileo-f6603f.netlify.com/ARWeb_06_anime/ARweb_06_anime.htm" >
+ARマーカーでアニメーション表示　Hiroマーカー</a>
 
 
-  <!-- ③ 作成したマーカーでのソース -->
-  <a-marker type='pattern' url='./marker/pattern-marker.patt'>
-    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
-      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
-      </a-animation>
-    </a-sphere>
-  </a-marker>
-
-
-  <a-entity camera></a-entity>
-</a-scene>
-</body>
-</html>
+</BODY>
+</HTML>
