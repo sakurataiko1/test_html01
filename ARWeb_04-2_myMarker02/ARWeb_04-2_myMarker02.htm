@@ -19,13 +19,20 @@
 
 
   <!-- ③ 作成したマーカーでのソース -->
-  <a-marker type='pattern' url='./marker/pattern-markerNoFrame.patt'>
+  <a-marker type='pattern' url='./marker/pattern-markerFrameGreen.patt'>
     <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
       <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
       </a-animation>
     </a-sphere>
   </a-marker>
 
+ <!-- ③ 作成したマーカーでのソース -->
+  <a-marker type='pattern' url='./marker/pattern-markerBrack.patt'>
+    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
+      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
+      </a-animation>
+    </a-sphere>
+  </a-marker>
 
   <a-entity camera></a-entity>
 </a-scene>
